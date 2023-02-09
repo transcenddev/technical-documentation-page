@@ -31,13 +31,12 @@ body {
   background: var(--clr-light);
   color: var(--text-secondary);
   display: flex;
-  gap: 3em;
 }
 
 .container {
   width: 100%;
-  max-width: 1000px;
-  padding: 2em 0em;
+  max-width: 1200px;
+  padding: 2em 5em;
   margin: 0 auto;
 }
 
@@ -80,10 +79,14 @@ pre code {
   background-color: var(--clr-primary-100);
   border: none;
   display: block;
+  white-space: pre-wrap;
   padding: 1rem;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 60em) {
+  body {
+    display: block;
+  }
   .nav {
     position: fixed;
     z-index: 1000;
