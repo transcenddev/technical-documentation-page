@@ -22,6 +22,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
+    <!-- Scripts -->
+    <script src="./scripts/nav.js" defer></script>
   </head>
   <body>
     <header>
@@ -29,11 +31,13 @@
         class="mobile-nav-toggle"
         aria-controls="primary-navigation"
         aria-expanded="false"
+        data-visible="false"
       >
-        <span class="material-icons-sharp"> menu </span>
+        <!-- <span class="sr-only">Menu</span> -->
+        <span class="material-icons-sharp""> menu </span>
       </button>
-      <nav class="nav">
-        <h1 class="nav__brand">JS Documentation</h1>
+      <nav class="nav" data-visible="false">
+        <h1 class="nav__title">JS Documentation</h1>
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#">Introduction</a>
