@@ -1,0 +1,66 @@
+:root {
+  --clr-primary: #6b6c70;
+  --clr-light: #fff;
+  --clr-dark: #000;
+  --text-primary: #000;
+  --text-secondary: #4d4e53;
+  --ff-body: "Roboto Mono", monospace;
+  --ff-heading: "Roboto Mono", monospace;
+  --fs-sm: 0.9rem;
+  --fs-md: ;
+  --fs-lg: 1.8125rem;
+  --fs-xl: ;
+  --fw-400: 400;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-400);
+}
+
+.nav {
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 320px;
+  min-height: 100vh;
+  padding: 1em 2em;
+}
+.nav__brand {
+  margin-bottom: 2em;
+}
+.nav__list {
+  list-style: none;
+  padding: 0;
+}
+.nav__item {
+  margin-bottom: 1.5em;
+}
+.nav__link {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: margin 300ms ease-in-out;
+}
+.nav__link:hover {
+  margin-left: 1em;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
