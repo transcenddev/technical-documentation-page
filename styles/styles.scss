@@ -1,0 +1,134 @@
+:root {
+  --clr-primary: #6b6c70;
+  --clr-primary-100: #f7f7f7;
+  --clr-light: #fff;
+  --clr-dark: #000;
+
+  --text-primary:  #000;
+  --text-secondary: #4d4e53;
+
+  --ff-body: 'Roboto Mono', monospace;
+  --ff-heading: 'Roboto Mono', monospace;
+
+  --fs-sm: 0.9rem;
+  --fs-md: ;
+  --fs-lg: 1.8125rem;
+  --fs-xl: ;
+
+  --fw-400: 400;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-400);
+  overflow-x: hidden;
+  background: var(--clr-light);
+  color: var(--text-secondary);
+
+  display: flex;
+  gap: 3em;
+}
+
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  padding: 2em 0em;
+}
+
+
+// navbar
+.nav {
+  position: sticky;
+  inset: 0;
+  width: 100%;
+  max-width: 350px;
+  min-height: 100vh;
+  padding: 1em 2em;
+  background: var(--clr-light);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+
+    // &:hover {
+    //   padding-left: 1em;
+    // }
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+
+.main-section ul li {
+  margin-bottom: 1em;
+}
+
+pre code {
+  background-color: var(--clr-primary-100);
+  border: none;
+  display: block;
+  padding: 1rem;
+}
+
+
+
+@media (max-width: 35em) {
+  .nav {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 0;
+    padding-top: 2em;
+    /* Moving the navbar off the screen to the left. */
+    transform:  translateX(-100%);
+    transition: transform 500ms ease-in-out;
+
+    &__brand {
+      margin-top: 1.5em;
+    }
+
+    &[data-visible='true'] {
+      transform:  translateX(0%);
+    }
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 0.8rem;
+    left: 0.8rem;
+
+    background: transparent;
+    border: none;
+  }
+
+}
